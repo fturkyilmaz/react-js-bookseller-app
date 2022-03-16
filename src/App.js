@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./component/Header";
+import Books from "./pages/Books";
+import BooksCreate from "./pages/BooksCreate";
+import BooksEdit from "./pages/BooksEdit";
+import Carts from "./pages/Carts";
+import "./App.css";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="ms-Grid" dir="ltr">
+        <div className="ms-Grid-row">
+          <div className="ms-Grid-col ms-sm-1 ms-xl1">
+            <Header />
+          </div>
+        </div>
+      </div>
+      <div style={{ paddingTop: 50 }}>
+        <Routes>
+          <Route path="/" element={<Books />} />
+          <Route path="/books" element={<Books />} />
+          <Route path="/books/new" element={<BooksCreate />} />
+          <Route path="/books/edit/:id" element={<BooksEdit />} />
+          <Route path="/cart" element={<Carts />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
-
-export default App;

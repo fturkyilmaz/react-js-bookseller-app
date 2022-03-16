@@ -1,17 +1,17 @@
-a.header-text{
-    color:#fff;
-    font-size:large;
-    font-weight:300;
-}
-
-a.header.button{
-    float:right;
-    color:#fff;
-    font-size:large;
-    padding-left:18px;
-    padding-right:18px;
-}
-
-a.header-button:hover{
-    background-color:#3e9de6;
-}
+a.header-text {
+    color: #fff;
+    font-size: large;
+    font-weight: 300;
+  }
+  
+  a.header-button {
+    float: right;
+    color: #fff;
+    font-size: large;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  
+  a.header-button:hover {
+    background-color: #3e9de6;
+  }
