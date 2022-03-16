@@ -3,6 +3,7 @@ import axios from "axios";
 import { DetailsList, SelectionMode } from "@fluentui/react";
 import { Stack, PrimaryButton } from "@fluentui/react";
 import { BookSellerContext } from "../context";
+import Toolbar from "../component/Toolbar";
 
 const columnProps = {
   tokens: { childrenGap: 20 },
@@ -95,6 +96,7 @@ export default function Books() {
 
   return (
     <div>
+      <Toolbar />
       <div className="content">
         <div className="content-header">Books</div>
         <DetailsList
